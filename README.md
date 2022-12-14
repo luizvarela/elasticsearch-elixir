@@ -104,6 +104,10 @@ config :my_app, MyApp.ElasticsearchCluster,
       # By default bulk indexing uses the "create" action. To allow existing
       # documents to be replaced, use the "index" action instead.
       bulk_action: "create"
+
+      # Path to bulk api url. Should start with a slash.
+      # You may need to use `/_bulk` for newer ElasticSearch versions.
+      bulk_path: "/_doc/_bulk"
     }
   }
 ```
